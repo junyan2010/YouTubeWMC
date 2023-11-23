@@ -37,21 +37,20 @@
             this.webView21.AllowExternalDrop = true;
             this.webView21.CreationProperties = null;
             this.webView21.DefaultBackgroundColor = System.Drawing.Color.White;
-            this.webView21.Location = new System.Drawing.Point(317, 103);
+            this.webView21.Location = new System.Drawing.Point(2, 3);
             this.webView21.Name = "webView21";
-            this.webView21.Size = new System.Drawing.Size(260, 111);
-            this.webView21.Source = new System.Uri("https://youtube.com/tv", System.UriKind.Absolute);
+            this.webView21.Size = new System.Drawing.Size(75, 23);
+            this.webView21.Source = new System.Uri("about:blank", System.UriKind.Absolute);
             this.webView21.TabIndex = 0;
             this.webView21.ZoomFactor = 1D;
+            this.webView21.CoreWebView2InitializationCompleted += new System.EventHandler<Microsoft.Web.WebView2.Core.CoreWebView2InitializationCompletedEventArgs>(this.webView21_CoreWebView2InitializationCompleted);
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.webView21);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Shown += new System.EventHandler(this.Form1_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.webView21)).EndInit();
             this.ResumeLayout(false);
 
