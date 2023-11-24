@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 namespace YouTubeWMC
 {
@@ -32,6 +33,24 @@ namespace YouTubeWMC
             this.webView21.Top = this.Top;
             this.webView21.Width = this.Width;
             this.webView21.Height = this.Height;
+        }
+
+        private void webView21_KeyDown(object sender, KeyEventArgs e)
+        {
+            Console.Out.WriteLine(e.KeyCode);
+            switch (e.KeyCode)
+            {
+                case Keys.BrowserBack:
+                    e.Handled = true;
+                    SendKeys.Send("{BACKSPACE}");
+                    break;
+            }
+        }
+
+        private void webView21_SourceChanged(object sender, CoreWebView2SourceChangedEventArgs e)
+        {
+            System.Drawing.Point leftTop = new System.Drawing.Point(0, 0);
+            Cursor.Position = leftTop;
         }
     }
 }
