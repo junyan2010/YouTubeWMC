@@ -49,7 +49,7 @@ namespace YouTubeWMC
 
         private void webView21_SourceChanged(object sender, CoreWebView2SourceChangedEventArgs e)
         {
-            System.Drawing.Point leftTop = new System.Drawing.Point(0, 0);
+            System.Drawing.Point leftTop = new System.Drawing.Point(this.Width, this.Height);
             Cursor.Position = leftTop;
         }
     }
