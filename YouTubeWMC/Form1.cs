@@ -15,7 +15,8 @@ namespace YouTubeWMC
         }
         private void webView21_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
         {
-            this.webView21.CoreWebView2.Settings.UserAgent = "Mozilla/5.0 (SMART-TV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.6778.200 Mobile Safari/537.36";
+            this.webView21.CoreWebView2.Settings.UserAgent =
+                "Mozilla/5.0 (SMART-TV) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246";
             this.webView21.Source = new System.Uri("https://youtube.com/tv", System.UriKind.Absolute);
         }
 
@@ -29,12 +30,12 @@ namespace YouTubeWMC
 
         private void webView21_KeyDown(object sender, KeyEventArgs e)
         {
-            Console.Out.WriteLine(e.KeyCode);
+            //Console.Out.WriteLine(e.KeyCode);
             switch (e.KeyCode)
             {
                 case Keys.BrowserBack:
                     e.Handled = true;
-                    SendKeys.Send("{BACKSPACE}");
+                    SendKeys.Send("{ESC}");
                     break;
             }
         }
