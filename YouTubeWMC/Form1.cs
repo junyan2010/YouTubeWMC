@@ -15,8 +15,8 @@ namespace YouTubeWMC
         }
         private void webView21_CoreWebView2InitializationCompleted(object sender, CoreWebView2InitializationCompletedEventArgs e)
         {
-            this.webView21.CoreWebView2.Settings.UserAgent =
-                "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 smarttv";
+            String edgeUserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/152.0.0.0 Safari/537.36 Edg/152.0.0.0";
+            this.webView21.CoreWebView2.Settings.UserAgent = edgeUserAgent + " smarttv";
             this.webView21.Source = new System.Uri("https://youtube.com/tv", System.UriKind.Absolute);
         }
 
